@@ -1,0 +1,71 @@
+
+/*Essa parte é pra retirar os styles padrões que vem no navegador↓↓↓↓↓↓↓*/
+* {
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+
+ul{
+    list-style: none;
+}
+/*Essa parte é pra retirar os styles padrões que vem no navegador↑↑↑↑↑↑↑*/
+
+/*Essa aparte se refere ao corpo do site↓↓↓↓*/
+body {
+    background-image: url(./assets/bg.jpg) ;
+    background-position: top center;
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+    background-color: #120530;
+}
+
+body * {
+    font-family: 'Inter',sans-serif;
+    line-height: 160%;
+}
+
+/*Colocar borda para ver que que ta pegando e onde ta oq 
+main * {
+    border: 1px solid red;
+}
+*/
+
+main{
+    max-width: 580px;
+    width: 90%;
+    margin: auto;
+
+}
+
+/*Essa aparte se refere as seções do site↓↓↓↓*/
+
+section{
+    color: white;
+}
+
+section h2{
+letter-spacing: -0.47px;
+}
+
+section p{
+
+    letter-spacing: -0.18px;
+    color: #A1A1AA;
+}
+
+/*Esta parte se refere a lista >>>>>> ALTEREI A TABELA, E NÃO OS ITENS DA TABELA<<<<<*/
+
+ul{
+    display: flex;
+    gap: 16px;
+}
+
+.movies_like img{
+    border-radius: 10px;
+}
+
+.movies_surprise img{
+    border-radius: 10px;
+}
+
