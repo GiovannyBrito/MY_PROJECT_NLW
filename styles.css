@@ -36,12 +36,37 @@ main{
     width: 90%;
     margin: auto;
 
+/*"display and gap" só para saltar um espaço a cada sessão↓↓↓↓*/
+    display: grid;
+    gap: 24px;
+
+    /*Distancia da margem do topo e do final da pagina */
+    margin-top: 32px;
+    margin-bottom: 80px;
+
 }
+
+
 
 /*Essa aparte se refere as seções do site↓↓↓↓*/
 
 section{
     color: white;
+
+/*Config da borda gradiente ↓↓↓*/
+    background-image: linear-gradient(90deg, #9572FC 0%, #43E7AD 50.52%, #E2D45C 100%);
+   padding-top: 4px;/*Para a bordar aparecer*/
+   border-radius: 8px;
+    
+}
+
+
+
+section div{
+    background-color: #162344;
+    padding: 32px;/*Borda ao redor da sessão*/
+    padding-top: 24px;/*borda do topo menor*/
+    border-radius: 8px;
 }
 
 section h2{
@@ -54,11 +79,12 @@ section p{
     color: #A1A1AA;
 }
 
-/*Esta parte se refere a lista >>>>>> ALTEREI A TABELA, E NÃO OS ITENS DA TABELA<<<<<*/
-
+/*Esta parte se refere a lista >>>>>> ALTEREI A TABELA, E NÃO OS ITENS DA TABELA ↓↓↓↓ <<<<<*/
 ul{
     display: flex;
-    gap: 16px;
+    flex-wrap: wrap; /*Jogar os itens da lista para baixo se não couber na pagina*/
+    gap: 16px;/*Espaço na horizontal*/
+    margin-top: 24px;/*Espaço na vertical*/
 }
 
 .movies_like img{
