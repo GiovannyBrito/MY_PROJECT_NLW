@@ -33,13 +33,29 @@ main * {
 
 header{
 padding-top: 32px;
+height: calc(120px-32px);
 }
 
 header div{
     width: 200px;
     margin: auto;
+    /*Aplicando animation - order :quando tempo gasta/ quanto tempo delay/ backward = esperar o delay pra executar a animation*/
+    animation: fromtop .7s backwards;
+    animation-delay: .3s;
+   
+    
+}
+
+header div img{
+    transition: transform .3s;
     background-image: linear-gradient(90deg, #9572FC 0%, #43E7AD 50.52%, #E2D45C 100%);
     border-radius: 50%;
+    padding: 4px
+
+}
+
+header div img:hover{
+    transform: scale(1.1);
 
 }
 
@@ -77,9 +93,23 @@ section{
     background-image: linear-gradient(90deg, #9572FC 0%, #43E7AD 50.52%, #E2D45C 100%);
    padding-top: 4px;/*Para a bordar aparecer*/
    border-radius: 8px;
-    
+   animation: frombottom .7s backwards;
 }
 
+
+/*Child serve para se referir a qual(ordem) dos 'section' é pra fazer uma tarefa em especifico*/
+
+section:nth-child(1){
+    animation-delay: .3s;
+}
+
+section:nth-child(2){
+    animation-delay: .6s;
+}
+
+section:nth-child(3){
+    animation-delay: .9s;
+}
 
 
 section div{
@@ -107,11 +137,51 @@ ul{
     margin-top: 24px;/*Espaço na vertical*/
 }
 
+ul li{
+    transition: transform .3s;
+}
+
+ul li:hover{
+    transform: scale(1.1);
+}
+
+
+
 .movies_like img{
     border-radius: 10px;
 }
 
 .movies_surprise img{
     border-radius: 10px;
+}
+
+/*Transition*/
+
+@keyframes fromtop{
+    from{
+        /*translateY = eixo Y/ eixo vertical*/
+        transform: translateY(-30px);
+        opacity: 0;
+    }
+
+
+    to{
+        opacity: 1;
+        transform: translateY(0);
+
+    }
+}
+
+@keyframes frombottom{
+    from{
+        transform: translateY(+30px);
+        opacity: 0;
+    }
+
+    to{transform: translateY(0);
+        opacity: 1;
+
+    }
+
 }
 
